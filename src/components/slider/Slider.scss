@@ -1,0 +1,127 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.sliderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px; /* Adjust the gap as needed */
+  overflow: hidden;
+  width: 100%; /* Take full width of the container */
+  max-width: 900px; /* Adjust max-width as needed */
+  position: relative;
+}
+
+.slider-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+
+  
+
+  @media screen and (max-width: 768px) {
+    flex: 0 0 calc(100% - 20px); /* One item per row */
+  }
+}
+
+.sliderArrow {
+  color: #46b0e6;
+  cursor: pointer;
+  font-size: 22px;
+  transition: 0.3s ease-in-out;
+}
+
+.sliderArrow:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1024px) {
+  .slider-item {
+    height: 80%; /* Adjust height as needed */
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-item {
+    height: 50%; /* Adjust height as needed */
+    width: auto; /* Allow flexibility */
+  }
+
+  .slider-column {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider-item {
+    width: 100%; /* One item per row */
+  }
+}
+
+// .Vector-17 {
+//   width: 204.1px;
+//   /* height: 13.1px; */
+//   flex-grow: 0;
+//   /* margin: 41px 0 0; */
+//   transform: rotate(-358.66deg);
+//   border: solid 4px #f0b80d;
+// }
+.slider-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 48px !important;
+  width: 30%;
+  margin: auto;
+}
+
+.slider-heading {
+  font-size: 36px;
+  font-weight: 800;
+  color: #000;
+  position: relative;
+  .underLine1 {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+}
+
+.slider-heading::after {
+  width: 204.1px;
+  height: 13.1px;
+  flex-grow: 0;
+  margin: 41px 0 0;
+  transform: rotate(-358.66deg);
+  border: solid 4px #f0b80d;
+}
+
+.slider-text {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #515151;
+}
+@media screen and (max-width: 768px) {
+  .slider-column {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .slider-column {
+    width: 90%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,154 @@
+$highlight-color: #46B0E6;
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+
+  .testimonial-content {
+    width: 50%;
+
+    .testimonial-heading {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+
+      .highlight {
+        color: $highlight-color;
+        position: relative;
+        .underline{
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+        }
+      }
+
+      .wave {
+        display: inline-block;
+        animation: wave-animation 2s infinite;
+      }
+    }
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .testimonial-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    .profile-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .testimonial-text {
+      display: flex;
+      flex-direction: column;
+
+      strong {
+        font-size: 16px;
+        color: #000;
+      }
+
+      p {
+        font-size: 16px;
+        color: #777;
+        margin: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.illustration {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 80%;
+  }
+}
+
+// Media Queries for Tablet
+@media (max-width: 1024px) {
+  .testimonial-container {
+    flex-direction: column;
+    text-align: center;
+
+    .testimonial-content {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .illustration {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+// Media Queries for Mobile
+@media (max-width: 768px) {
+  .testimonial-container {
+    padding: 20px;
+
+    .testimonial-content {
+      padding: 0;
+    }
+  }
+
+  .testimonial-heading {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .testimonial-item {
+    flex-direction: column;
+    padding: 10px;
+
+    .profile-pic {
+      margin-bottom: 10px;
+    }
+  }
+}

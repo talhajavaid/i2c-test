@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+.LandingPage {
+  background-image: url(/src/assets/images/Background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container {
+  width: 85%;
+  margin: auto;
+}
